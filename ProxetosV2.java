@@ -50,7 +50,9 @@ public class Main {
 public static void cadastrar(Scanner yan){
     try {
                 FileWriter arquivo = new FileWriter("dados.txt", true);
+                System.out.println("Digite o nome");
                 String nome = yan.nextLine();
+                System.out.println("Digite a idade");
                 int idade = yan.nextInt();
                 arquivo.write(nome + "\n");
                 arquivo.write("Idade; " + idade + "\n");
@@ -78,6 +80,5 @@ public static void listar(){
                 } catch (IOException e) {
                 System.out.println("Erro");
                 } 
-}
 }
 }
