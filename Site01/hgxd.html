@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">Meu Site Interativo</h1>
+    <p id="texto">Este é um texto de exemplo.</p>
+
+    <button onclick="alterarTitulo()">Alterar Título</button>
+    <button onclick="mudarCor()">Mudar Cor do Texto</button>
+    <button onclick="saudacao()">Saudação</button>
+    <div id="caixa" style="background: yellow; padding: 20px;">
+    Conteúdo da caixa
+</div>
+<button onclick="alternarVisibilidade()">Mostrar/Esconder</button>
+    <script>
+        function alterarTitulo() {
+            document.getElementById("titulo").innerHTML = "Título Alterado!";
+        }
+
+        function mudarCor() {
+            document.getElementById("texto").style.color = "blue";
+            document.getElementById("texto").style.fontWeight = "bold";
+        }
+
+        function saudacao() {
+            let nome = prompt("Qual é o seu nome?");
+            alert("Olá, " + nome + "! Seja bem-vindo!");
+        }
+        function alternarVisibilidade() {
+    let caixa = document.getElementById("caixa");
+    if (caixa.style.display === "none") {
+        caixa.style.display = "block";
+    } else {
+        caixa.style.display = "none";
+    }
+}
+    </script>
+
+</body>
+</html>
+
